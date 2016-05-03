@@ -327,12 +327,13 @@ textarea {
 .account {
 	z-index:9;
 	border-top:none !important;
-	width:320px;
-    margin-left:-80px;
+	width:240px;
+	margin-left:0px;
 	padding:0 15px !important;
 	background:rgba(0,0,0,0.95);
 	height:77px;
 	box-sizing:border-box;
+	background:transparent;
 }
 
 .account .status {
