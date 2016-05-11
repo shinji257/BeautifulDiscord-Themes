@@ -1,10 +1,4 @@
-/* Copyright (c) 2016 DinosParkour
- * Please do not redistribute without permission.
- * Thank you, and enjoy!
- *
- * VERSION: 4.8
- *
- */
+//META{"name":"Nova_Theme","description":"Explore the galaxy with a chilling theme","author":"DinosParkour","version":"5.12"}*//
 
 /* Background */
 .app {
@@ -180,7 +174,6 @@ li.channel.channel-text.selected {
 
 .account {
     border-top: none;
-    margin-left: 15px;
 }
 
 .status {
