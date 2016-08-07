@@ -1,4 +1,4 @@
-//META{"name":"Nova_Theme","description":"Explore the galaxy with a chilling theme","author":"DinosParkour","version":"5.12"}*//
+//META{"name":"Nova_Theme","description":"Explore the galaxy with a chilling theme","author":"DinosParkour","version":"7.15"}*//
 
 /* Background */
 .app {
@@ -18,6 +18,7 @@
 .guild-channels,
 .account,
 .links,
+.chat,
 .messages-wrapper,
 .title-wrap,
 .content,
@@ -49,16 +50,16 @@ li.active .guild-inner {
 }
 
 /*Selected guild & unread messages*/
-.guilds li.unread .guild-inner:before {
+.guilds-wrapper .guilds .guild.unread:before {
     background-color: rgba(255,0,0,0.25);
 }
 
-.guilds li.active .guild-inner:before {
+.guilds-wrapper .guilds .guild.selected:before {
     background-color: rgba(0,0,0,0.25);
 }
 
-.guilds li.active .guild-inner:before,
-.guilds li.unread .guild-inner:before {
+.guilds-wrapper .guilds .guild.selected:before,
+.guilds-wrapper .guilds .guild.unread:before {
     width: 77.5px;
     height: 55px;
     margin-top: -28px;
@@ -104,13 +105,17 @@ li.active .guild-inner {
     background: rgba(235,232,218,0.05);
 }
 
-.guild-channels ul .channel:not(.selected):before,
-.guild-channels ul .channel.selected:before,
-.guild-channels ul .channel.selected:hover:before,
-.private-channels .channel:not(.selected):before,
+.guild-channels .channel-text.selected:before,
+.guild-channels .channel-text.selected:hover:before,
+.guild-channels .channel-text:hover.channel-muted:before,
+.guild-channels .channel-text:hover:not(.unread):before,
 .private-channels .channel.selected:before,
-.private-channels .channel.selected:hover:before {
+.private-channels .channel:hover:before {
     border-left: 5px solid purple;
+}
+
+.private-channels .channel:hover:before {
+    opacity: .25;
 }
 
 .guild-channels ul .channel-text.unread:not(.selected):not(.channel-muted):before {
@@ -118,8 +123,7 @@ li.active .guild-inner {
 }
 
 .search-result,
-.tab-bar-item:hover,
-li.channel.channel-text:hover {
+.tab-bar-item:hover {
     background: rgba(235,232,218,0.05) !important;
 }
 
@@ -128,7 +132,7 @@ li.channel.channel-text:hover {
 .btn-friends.selected,
 .search-result.selected,
 .channel.selected.private,
-li.channel.channel-text.selected {
+div.channel.channel-text.selected {
     background: rgba(235,232,218,0.1) !important;
 }
 
@@ -281,7 +285,8 @@ li.channel.channel-text.selected {
     border: 1px solid rgba(0,0,0,0.5) !important;
 }
 
-/*Blocked spoilers*/
+/*Spoiler tags*/
+.chat .has-more button,
 .message-group-blocked-btn,
 .message-group-blocked.revealed {
     background-color: rgba(0,0,0,0.3) !important;
