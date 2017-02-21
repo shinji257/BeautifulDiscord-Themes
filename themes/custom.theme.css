@@ -98,6 +98,12 @@ textarea {
 /* User list area */
 .channel-members { background:rgba(0,0,0,0.9) !important }
 
+/* Channel Header */
+.title-wrap {
+	/*background:rgba(0,0,0,0.8) !important*/
+	border-bottom:1px solid rgba(0,0,0,0.3) !important;
+	background:rgba(0,0,0,0.8) !important;
+}
 /*
                                 _ _     _                   _   _             
  ___  ___ _ ____   _____ _ __  | (_)___| |_   ___  ___  ___| |_(_) ___  _ __  
@@ -478,29 +484,33 @@ textarea {
 .account .btn:active {
 	background:#000;
 }
-
+/*
 .account .btn-settings:after {
 	opacity:0.3;
 }
 
 .account .btn-deafen,
 .account .btn-mute {
-    border-right:none;/*1px solid #101010;*/
+    border-right:none;/*1px solid #101010;*//*
 }
 
 #voice-connection {
 	z-index:9;
 	border-top:none !important;
 	/*width:285px;
-    margin-left:-83px;*/
+    margin-left:-83px;*//*
 	padding:15px 20px 15px 18px !important;
 }
-
+*/
 #voice-connection .btn {
-	background:#000;
+	background:transparent;/*#000;*/
 	box-shadow:none !important;
 }
 
+#voice-connection .btn:active {
+	background:#000;
+}
+/*
 .account .btn-deafen, .account .btn-settings {
 	box-shadow:none !important;
 }
@@ -518,7 +528,43 @@ textarea {
 	border:none !important;
 }
 
-/*
+/* Account Panel */
+.account .btn-mute, .account .btn-deafen, .account .btn-settings {
+    border: none;
+    box-shadow: none;
+    transition: background-color 0.2s;
+}
+
+.account .btn-group {
+    border-radius: 50px;
+}
+
+.account .btn-mute {
+    border-radius: 50px 0 0 50px;
+}
+
+.account .btn-settings {
+    border-radius: 0 50px 0 0 50px;
+}
+
+.account .btn-mute:hover, .account .btn-deafen:hover, .account .btn-settings:hover {
+    background-color: #23272A;
+}
+
+/* Voice Panel */
+#voice-connection .btn-group {
+    border-radius: 50px;
+}
+
+#voice-connection .btn-info, #voice-connection .btn-disconnect {
+    border: none;
+    box-shadow: none;
+    transition: background-color 0.2s;
+}
+
+#voice-connection .btn-info:hover, #voice-connection .btn-disconnect:hover {
+    background-color: #23272A;
+}
       _           _                   _   _             
   ___| |__   __ _| |_   ___  ___  ___| |_(_) ___  _ __  
  / __| '_ \ / _` | __| / __|/ _ \/ __| __| |/ _ \| '_ \ 
@@ -726,11 +772,6 @@ textarea {
 
 .emoji-picker .categories .item.selected {
 	border-bottom-color:#25ACE8;
-}
-
-.title-wrap {
-	border-bottom:1px solid rgba(0,0,0,0.3) !important;
-	background:rgba(0,0,0,0.95) !important;
 }
 
 .header-toolbar button.active {
