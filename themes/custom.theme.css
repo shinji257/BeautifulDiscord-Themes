@@ -1559,6 +1559,9 @@ textarea {
 	background:none;
 }
 
+.user-settings-modal-streamer-mode {
+    background:none;
+}
 .user-settings-modal-games {
 	background:rgba(255,255,255,0.05) !important;
 	border:none !important;
