@@ -510,7 +510,7 @@ textarea {
 	background: transparent !important;
 }
 
-.search-results-wrap .search-result:not(.expanded) .search-result-message.hit, 
+.search-results-wrap .search-result:not(.expanded) .search-result-message.hit,
 .search-results-wrap .search-result.expanded {
 	border: 2px solid rgba(17, 21, 25, 0.6) !important;
 }
@@ -1562,6 +1562,7 @@ textarea {
 .user-settings-modal-streamer-mode {
     background:none;
 }
+
 .user-settings-modal-games {
 	background:rgba(255,255,255,0.05) !important;
 	border:none !important;
@@ -1582,7 +1583,7 @@ textarea {
 }
 
 .now-playing {
-	background:#25ACE8 !important;	
+	background:#25ACE8 !important;
 }
 
 .now-playing.no-detection {
@@ -1882,6 +1883,7 @@ textarea {
 
 .popout-bottom:not(.no-arrow):not(.search-popout) {
 	left: 191px !important;
+	top: 30px !important;
 }
 
 .themed-popout {
@@ -2025,8 +2027,4 @@ textarea {
 
 .channel.channel-voice li.speaking .avatar-small[style*="a_"] {
     border-color: #fc964b;
-}
-
-.theme-dark .popout-bottom{
-	top: 30px !important;
 }
