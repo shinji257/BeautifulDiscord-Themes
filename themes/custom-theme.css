@@ -1,6 +1,6 @@
 /**********************************************************
  *           Crystalline CSS for BeautifulDiscord         *
- *                     Version 1.7.5                      *
+ *                     Version 1.8.2                      *
  *                                                        *
  *                   Created by SamuiNe                   *
  *               https://github.com/SamuiNe               *
@@ -72,6 +72,38 @@ body {
 .markup pre code {
     background: transparent !important;
 }
+
+/* In case anyone wants to change the channel font size, here ya go o/
+   Just need to uncomment these 3 groups. */
+
+/* Channel name font size
+.nameMutedText-1YDcP-,
+.nameMutedVoice-26k4cP,
+.nameDefaultText-QoumjC,
+.nameDefaultVoice-1swZoh,
+.nameLockedText-2fGz07,
+.nameLockedVoice-wNOMNa,
+.nameSelectedText-32NDX5,
+.nameSelectedVoice-XpjYTw,
+.nameUnreadText-1pxldj,
+.nameUnreadVoice-QK4gxH
+{
+    font-size: 13px;
+}
+*/
+
+/* Channel Icon size
+.icon-3tVJnl{
+    width: 12px !important;
+    height: 12px !important;
+}
+*/
+
+/* Connected Voice User font size
+.nameDefault-1I0lx8{
+    font-size: 12px;
+}
+*/
 
 /*
     Disabling the edited message picture is possible by encapsulating .message-group .comment .edited with both */ /*.
@@ -152,6 +184,22 @@ div.theme-dark.context-menu.item.item-subMenu{
     border-radius: 0;
 }
 
+.invite-button.can-click{
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.invite-button .invite-button-body,
+.invite-button .invite-button-header{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.invite-button-body{
+    color: #99aab5 !important;
+}
+
+
 .badge{
     border-radius: 0;
     box-shadow: none;
@@ -187,8 +235,8 @@ div.theme-dark.context-menu.item.item-subMenu{
     box-shadow: none;
 }
 
-.settings .settings-header {
-    background-color: rgba(0, 0, 0, 0.3);
+.deprecated-settings-modal .settings-header{
+    background-color: rgba(42, 42, 42, 0.3);
     border-radius: 0;
 }
 
@@ -752,6 +800,11 @@ div.message-group-blocked{
     box-shadow: none;
 }
 
+#rtc-connection-popout hr{
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
 #rtc-debug-modal #users-section .user-list{
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -771,6 +824,15 @@ h3{
 .popout section{
     background-color: rgba(42, 42, 42, 0.8);
     border-radius: 0 !important;
+}
+
+.popout header,
+.user-popout {
+    border-radius: 0 !important;
+}
+
+.popout header{
+    background-color: rgba(42, 42, 42, 0.8);
 }
 
 .popout-menu{
@@ -830,6 +892,10 @@ h3{
 .option-popout .btn-item:hover{
     background-color: rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.9);
+}
+
+.modal-content{
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .modal-content .form-inner p{
@@ -1086,6 +1152,10 @@ div.guild-header{
     border-color: rgba(255, 255, 255, 0.2);
 }
 
+.theme-dark .guild-settings-members-member .tag{
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .guild-settings-modal .emoji-row .btn+.btn,
 .guild-settings-modal .member-buttons .btn{
     background-color: rgba(255, 255, 255, 0.2);
@@ -1287,6 +1357,10 @@ div.guild-header{
     color: rgba(255, 255, 255, 0.8);
 }
 
+.theme-dark .channel-members{
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .channel-members-wrap .scroller-wrap .scroller{
     background: rgba(0, 0, 0, 0.2);
 }
@@ -1310,15 +1384,6 @@ div.guild-header{
 
 .theme-dark .channel-members .member:hover{
     background-color: rgba(0, 0, 0, 0.2);
-}
-
-.popout header,
-.user-popout {
-    border-radius: 0 !important;
-}
-
-.popout header{
-    background-color: rgba(42, 42, 42, 0.9);
 }
 
 .member-roles .member-role{
@@ -1525,17 +1590,23 @@ input:disabled{
 }
 
 .messages-popout .message-group .action-buttons{
-    background-color: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(42, 42, 42, 0) !important;
     background-size: 0 0;
-    box-shadow: 0 0;
-    transition: none !important;
+    box-shadow: none !important;
+}
+
+.messages-popout .message-group .action-buttons:hover{
+    background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .theme-dark .themed-popout .text{
     color: rgba(255, 255, 255, 0.8);
 }
 
-.search-popout,
+.search-popout{
+    margin-top: 0 !important;
+    background-color: rgba(0, 0, 0, 0);
+}
 .results-group{
     margin-top: 0 !important;
 }
@@ -1698,6 +1769,10 @@ span.channel-name{
     box-shadow: none !important;
 }
 
+.search-popout .option .non-text{
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .search-popout .search-query{
     background-color: rgba(0, 0, 0, 0.5);
     border: 0;
@@ -1707,9 +1782,34 @@ span.channel-name{
     border: 0;
 }
 
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker,
+.theme-light .ui-calendar-picker .react-datepicker{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__header,
+.theme-light .ui-calendar-picker .react-datepicker__header{
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .search-popout .date-picker{
-    background-color: rgba(42, 42, 42, 0.5);
+    background-color: rgba(0, 0, 0, 0.25);
     border: 0;
+}
+
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__current-month,
+.theme-light .ui-calendar-picker .react-datepicker__current-month{
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__week .react-datepicker__day:last-of-type,
+.theme-light .ui-calendar-picker .react-datepicker__week .react-datepicker__day:last-of-type,
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__day,
+.theme-light .ui-calendar-picker .react-datepicker__day,
+.theme-dark .theme-light .ui-calendar-picker .react-datepicker__day-name,
+.theme-light .ui-calendar-picker .react-datepicker__day-name{
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .react-datepicker{
@@ -1805,7 +1905,7 @@ div.jump-button{
 
 div.option.selected{
     border-radius: 0;
-    background-color: rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(42, 42, 42, 0.42) !important;
 }
 
 div.results-group{
@@ -2064,12 +2164,28 @@ span.amount {
     background: 0 0;
 }
 
+.theme-dark .ui-card-primary{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 .theme-dark .ui-card-primary:not(.editable):not(.outline) .ui-form-text{
     color: rgba(255, 255, 255, 0.9);
 }
 
 .theme-dark .ui-card-primary.editable{
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .ui-card-primary.editable:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-dark .ui-card-primary .ui-form-title.h5{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.theme-dark .ui-radiogroup .desc{
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .theme-dark .ui-standard-sidebar-view .sidebar-region,
@@ -2141,12 +2257,25 @@ span.amount {
     border-radius: 0;
 }
 
+.theme-dark .ui-audit-log{
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.theme-dark .ui-audit-log .user-hook .discrim{
+    opacity: 0.9;
+}
+
 .theme-dark .ui-audit-log strong{
     color: rgba(197, 207, 237, 1);
 }
 
 .theme-dark .ui-audit-log .timestamp{
     color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-elevation-border-low, .theme-dark .elevation-border-low{
+    background-color: rgba(42, 42, 42, 0.8);
+    border: none;
 }
 
 .ui-flex.flex-horizontal-reverse>.ui-flex,
@@ -2227,14 +2356,21 @@ span.amount {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.theme-dark .ui-card.outline{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 /*
 .ui-standard-sidebar-view, .ui-standard-sidebar-view *{
     color: rgba(255, 255, 255, 0.9);
 }*/
 
+.user-settings-connections .connection{
+    border-radius: 0;
+}
+
 .user-settings-connections .connection-header{
     border: none;
-    border-radius: 0;
 }
 
 .theme-dark .user-settings-notifications .notifications-sound{
@@ -2253,6 +2389,71 @@ span.amount {
     border-radius: 0;
 }
 
+.mfa-modal .mfa-step{
+    border:none;
+}
+
 .theme-dark .user-settings-games .game {
     box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.theme-dark .user-settings-games .game-name-input:focus,
+.theme-dark .user-settings-games .game-name-input:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 0;
+}
+
+.theme-dark .user-settings-games .last-played,
+.theme-dark .user-settings-games .overlay-status-text{
+    color: rgba(255, 255, 255, 0.42);
+}
+
+/* New updates from 2017/06/09 */
+.content-2mSKOj{
+    border-radius: 0;
+}
+
+.contentSelectedText-3j5CXt{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-2mSKOj:hover{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.container-RYiLUQ,
+.private-channels .channel.selected a{
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.private-channels .channel:hover a {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.contentHoveredText-2HYGIY,
+.contentHoveredVoice-3qGNKh:active,
+.contentSelectedVoice-gTtYM9:active{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.header-1tSljs,
+.container-iksrDt{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container-3lnMWU{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: none;
+}
+
+.wrapper-2xO9RX{
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.wrapper-2ldvyE{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
 }
